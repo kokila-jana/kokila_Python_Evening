@@ -1,0 +1,10 @@
+import pymysql as m
+con=m.Connection(host="localhost",user="root",password="kokilajana",database="evening")
+cur=con.cursor()
+name=input("Enter name...")
+course=input("Enter course...")
+phone=input('enter phone number...')
+cur.execute("insert into info1 values('"+name+"','"+course+"','"+phone+"')")
+# cur.execute("insert into info1 values('Jana','Python','9095589221')")
+con.commit()
+print("data stored...")
